@@ -2,6 +2,8 @@ package com.enigma.jobConnector.controller;
 
 import com.enigma.jobConnector.utils.ResponseUtil;
 import jakarta.validation.ConstraintViolationException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -13,9 +15,11 @@ import org.springframework.web.server.ResponseStatusException;
 @RestControllerAdvice
 public class ErrorController {
 
+
     @ExceptionHandler({ResponseStatusException.class})
     public ResponseEntity<?> handlingResponseStatusException(ResponseStatusException e) {
         HttpStatusCode statusCode = e.getStatusCode();
+
         return ResponseUtil.buildResponse(HttpStatus.valueOf(statusCode.value()), e.getReason(), null);
     }
 
