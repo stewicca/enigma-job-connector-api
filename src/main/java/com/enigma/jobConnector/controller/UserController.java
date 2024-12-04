@@ -6,7 +6,6 @@ import com.enigma.jobConnector.dto.request.UserSearchRequest;
 import com.enigma.jobConnector.dto.response.UserResponse;
 import com.enigma.jobConnector.services.UserService;
 import com.enigma.jobConnector.utils.ResponseUtil;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;

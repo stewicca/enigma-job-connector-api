@@ -2,8 +2,6 @@ package com.enigma.jobConnector.controller;
 
 import com.enigma.jobConnector.utils.ResponseUtil;
 import jakarta.validation.ConstraintViolationException;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
